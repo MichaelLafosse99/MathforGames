@@ -30,6 +30,11 @@ float Vector2::Magnitude()
 	return sqrtf(c2);
 }
 
+float Vector2::Distance(Vector2 other)
+{
+	return ((*this - other).Magnitude());
+}
+
 Vector2 Vector2::Normalize()
 {
 	return Vector2((xPos / Magnitude()), (yPos / Magnitude()));

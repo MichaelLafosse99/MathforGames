@@ -14,6 +14,7 @@ public:
 	float Gety();
 	float Getx();
 	float Magnitude();
+	float Distance(Vector2 other);
 	Vector2 Normalize();
 
 	Vector2 operator + (Vector2& rhs);

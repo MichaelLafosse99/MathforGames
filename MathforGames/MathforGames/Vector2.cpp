@@ -35,6 +35,11 @@ float Vector2::Distance(Vector2 other)
 	return ((*this - other).Magnitude());
 }
 
+float Vector2::DotProduct(Vector2 other)
+{
+	return ((this->xPos*other.xPos) + (this->yPos*other.yPos));
+}
+
 Vector2 Vector2::Normalize()
 {
 	return Vector2((xPos / Magnitude()), (yPos / Magnitude()));

@@ -42,9 +42,21 @@ float Vector3::Distance(Vector3 other)
 	return ((*this - other).Magnitude());
 }
 
+float Vector3::DotProduct(Vector3 other)
+{
+	return ((this->xPos*other.xPos) + (this->yPos*other.yPos) + (this->zPos*other.zPos));
+}
+
 Vector3 Vector3::Normalize()
 {
 	return Vector3((xPos / Magnitude()), (yPos / Magnitude()), (zPos / Magnitude()));
+}
+
+Vector3 Vector3::CrossProduct(Vector3 other)
+{
+	return Vector3((this->yPos*other.zPos) - (this->zPos*other.yPos),
+					(this->zPos*other.xPos) - (this->xPos*other.zPos),
+					(this->xPos*other.yPos) - (this->yPos*other.xPos));
 }
 
 Vector3 Vector3::operator+(Vector3 & rhs)

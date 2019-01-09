@@ -69,3 +69,19 @@ bool Vector2::operator!=(Vector2 & rhs)
 {
 	return this->xPos != rhs.xPos || this->yPos != rhs.yPos;
 }
+
+float Vector2::operator[](int index)
+{
+	if (index == 0)
+	{
+		return xPos;
+	}
+	else if (index == 1)
+	{
+		return yPos;
+	}
+	else
+	{
+		return 0;
+	}
+}

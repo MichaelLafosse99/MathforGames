@@ -76,10 +76,30 @@ Vector3 Vector3::operator*(float & rhs)
 
 bool Vector3::operator==(Vector3 & rhs)
 {
-	return this->xPos == rhs.xPos && this->yPos == rhs.yPos;
+	return this->xPos == rhs.xPos && this->yPos == rhs.yPos && this->zPos == rhs.zPos;
 }
 
 bool Vector3::operator!=(Vector3 & rhs)
 {
-	return this->xPos != rhs.xPos || this->yPos != rhs.yPos;
+	return this->xPos != rhs.xPos || this->yPos != rhs.yPos || this->zPos != rhs.zPos;
+}
+
+float Vector3::operator[](int index)
+{
+	if (index == 0)
+	{
+		return xPos;
+	}
+	else if (index == 1)
+	{
+		return yPos;
+	}
+	else if (index == 2)
+	{
+		return zPos;
+	}
+	else
+	{
+		return 0;
+	}
 }

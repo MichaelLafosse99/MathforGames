@@ -41,4 +41,5 @@ public:
 	Vector3 operator * (float& rhs);
 	bool operator == (Vector3& rhs);
 	bool operator != (Vector3& rhs);
+	float operator [] (int index);
 };

@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors", "MathforGames\MathforGames.vcxproj", "{3B02BC88-5142-4A62-890A-129491191C17}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "temp", "temp\temp.vcxproj", "{43A8C8BF-3FD6-427B-8333-68E3D3D29149}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,14 +21,6 @@ Global
 		{3B02BC88-5142-4A62-890A-129491191C17}.Release|x64.Build.0 = Release|x64
 		{3B02BC88-5142-4A62-890A-129491191C17}.Release|x86.ActiveCfg = Release|Win32
 		{3B02BC88-5142-4A62-890A-129491191C17}.Release|x86.Build.0 = Release|Win32
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Debug|x64.ActiveCfg = Debug|x64
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Debug|x64.Build.0 = Debug|x64
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Debug|x86.ActiveCfg = Debug|Win32
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Debug|x86.Build.0 = Debug|Win32
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Release|x64.ActiveCfg = Release|x64
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Release|x64.Build.0 = Release|x64
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Release|x86.ActiveCfg = Release|Win32
-		{43A8C8BF-3FD6-427B-8333-68E3D3D29149}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

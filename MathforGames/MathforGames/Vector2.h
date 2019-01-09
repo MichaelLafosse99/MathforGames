@@ -34,4 +34,5 @@ public:
 	Vector2 operator * (float& rhs);
 	bool operator == (Vector2& rhs);
 	bool operator != (Vector2& rhs);
+	float operator [] (int index);
 };

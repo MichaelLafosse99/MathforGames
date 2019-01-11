@@ -84,7 +84,7 @@ bool Vector4::operator!=(Vector4 & rhs)
 	return this->xPos != rhs.xPos || this->yPos != rhs.yPos || this->zPos != rhs.zPos || this->wPos != rhs.wPos;
 }
 
-float Vector4::operator[](int index)
+float Vector4::operator[](int index) const
 {
 	if (index == 0)
 	{

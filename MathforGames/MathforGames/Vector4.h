@@ -39,5 +39,5 @@ public:
 	Vector4 operator * (float& rhs);
 	bool operator == (Vector4& rhs);
 	bool operator != (Vector4& rhs);
-	float operator [] (int index);
+	float operator [] (int index) const;
 };

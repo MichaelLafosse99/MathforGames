@@ -32,7 +32,7 @@ matrix3 matrix3::operator*(const matrix3 & otherMatrix) const
 	return result;
 }
 
-matrix3 matrix3::operator*(const Vector3 & vector) const
+Vector3 matrix3::operator*(const Vector3 & vector) const
 {
 	Vector3 result;
 
@@ -42,4 +42,10 @@ matrix3 matrix3::operator*(const Vector3 & vector) const
 					data[1][r] * vector[1] +
 					data[2][r] * vector[2];
 	}
+	return  result;
+}
+
+const Vector3 & matrix3::operator[](int index) const
+{
+	return axis[index];
 }

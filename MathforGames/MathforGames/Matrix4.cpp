@@ -1,6 +1,6 @@
 #include "Matrix4.h"
 
-
+//This initializes a 3d matrix to have values of 0
 matrix4::matrix4()
 {
 	for (int r = 0; r < 4; r++)
@@ -12,22 +12,57 @@ matrix4::matrix4()
 	}
 }
 
-void matrix4::rotateX(float radian)
+//The "definitions" for rotating the x, y, and z axes:
+void matrix4::setRotateX(float radians)
 {
+	xAxis = Vector4(1.0, 0.0, 0.0, 0.0);
+	yAxis = Vector4(0.0, cosf(radians), sinf(radians), 0.0);
+	zAxis = Vector4(0.0, -sinf(radians), cosf(radians), 0.0);
+	wAxis = Vector4(0.0, 0.0, 0.0, 1.0);
 }
 
-void matrix4::rotateY(float radian)
+void matrix4::setRotateY(float radians)
 {
+	xAxis = Vector4(cosf(radians), 0.0, -sinf(radians), 0.0);
+	yAxis = Vector4(0.0, 1.0, 0.0, 0.0);
+	zAxis = Vector4(sinf(radians), 0.0, cosf(radians), 0.0);
+	wAxis = Vector4(0.0, 0.0, 0.0, 1.0);
 }
 
-void matrix4::rotateZ(float radian)
+void matrix4::setRotateZ(float radians)
 {
+	xAxis = Vector4(cosf(radians), sinf(radians), 0.0, 0.0);
+	yAxis = Vector4(-sinf(radians), cosf(radians), 0.0, 0.0);
+	zAxis = Vector4(0.0, 0.0, 1.0, 0.0);
+	wAxis = Vector4(0.0, 0.0, 0.0, 1.0);
 }
 
-void matrix4::rotateW(float radian)
+//Functions that rotate the x, y, and z axes:
+void matrix4::rotateX(float radians)
 {
+	matrix4 matrix;
+	matrix.setRotateX(radians);
+
+	*this = *this * matrix;
 }
 
+void matrix4::rotateY(float radians)
+{
+	matrix4 matrix;
+	matrix.setRotateY(radians);
+
+	*this = *this * matrix;
+}
+
+void matrix4::rotateZ(float radians)
+{
+	matrix4 matrix;
+	matrix.setRotateZ(radians);
+
+	*this = *this * matrix;
+}
+
+//Multiplying a vector by a matrix
 matrix4 matrix4::operator*(const matrix4 & otherMatrix) const
 {
 	matrix4 result;
@@ -47,6 +82,7 @@ matrix4 matrix4::operator*(const matrix4 & otherMatrix) const
 	return result;
 }
 
+//Multiplying a vector by a matrix
 Vector4 matrix4::operator*(Vector4 vector)
 {
 	Vector4 result;
@@ -58,9 +94,4 @@ Vector4 matrix4::operator*(Vector4 vector)
 					data[2][r] * vector[2];
 	}
 	return  result;
-}
-
-const Vector4 & matrix4::operator[](int index) const
-{
-	return axis[index];
 }

@@ -26,7 +26,7 @@ public:
 	//Finds the distance between two vectors
 	float Distance(Vector3 other);
 
-
+	//Returns a scalar value by multiplying then adding two vector's positions
 	float DotProduct(Vector3 other);
 	
 	//Modifies the vector's magnitude
@@ -42,5 +42,7 @@ public:
 	Vector3 operator * (float& rhs);
 	bool operator == (Vector3& rhs);
 	bool operator != (Vector3& rhs);
+
+	//subscript operator that takes in an index and returns a reference
 	float& operator [] (int index);
 };

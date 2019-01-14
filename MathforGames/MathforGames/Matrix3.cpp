@@ -1,6 +1,6 @@
 #include "Matrix3.h"
 
-//This initializes a 3d matrix to have vaules of 0.
+//This initializes a 2d matrix to have values of 0.
 matrix3::matrix3()
 {
 	for (int r = 0; r < 3; r++)
@@ -12,16 +12,21 @@ matrix3::matrix3()
 	}
 }
 
-void matrix3::rotateX(float radian)
+//The "definition" of rotating the z axis
+void matrix3::setRotateZ(float radians)
 {
+	xAxis = Vector3(cosf(radians), sinf(radians), 0.0);
+	yAxis = Vector3(-sinf(radians), cosf(radians), 0.0);
+	zAxis = Vector3(0.0, 0.0, 1.0);
 }
 
-void matrix3::rotateY(float radian)
+//Function that rotates the z axis
+void matrix3::rotateZ(float radians)
 {
-}
+	matrix3 matrix;
+	matrix.setRotateZ(radians);
 
-void matrix3::rotateZ(float radian)
-{
+	*this = *this *matrix;
 }
 
 //This operator is what allows two matrices to multiply, returning a
@@ -44,6 +49,7 @@ matrix3 matrix3::operator*(const matrix3 & otherMatrix) const
 	return result;
 }
 
+//operator for multiplying a matrix and a vector.
 Vector3 matrix3::operator*(Vector3 & vector)
 {
 	Vector3 result;
@@ -55,10 +61,4 @@ Vector3 matrix3::operator*(Vector3 & vector)
 					data[2][r] * vector[2];
 	}
 	return  result;
-}
-
-//Need To Look at/Fix
-const Vector3 & matrix3::operator[](int index) const
-{
-	return axis[index];
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+#include <iostream>
 
 class Vector3
 {
@@ -41,6 +42,5 @@ public:
 	Vector3 operator * (float& rhs);
 	bool operator == (Vector3& rhs);
 	bool operator != (Vector3& rhs);
-	float operator [] (int index) const;
-	Vector3* operator [] (float number) const;
+	float& operator [] (int index);
 };

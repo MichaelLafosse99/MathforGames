@@ -12,6 +12,18 @@ matrix3::matrix3()
 	}
 }
 
+void matrix3::rotateX(float radian)
+{
+}
+
+void matrix3::rotateY(float radian)
+{
+}
+
+void matrix3::rotateZ(float radian)
+{
+}
+
 //This operator is what allows two matrices to multiply, returning a
 //third matrix as a result.
 matrix3 matrix3::operator*(const matrix3 & otherMatrix) const
@@ -32,7 +44,7 @@ matrix3 matrix3::operator*(const matrix3 & otherMatrix) const
 	return result;
 }
 
-Vector3 matrix3::operator*(const Vector3 & vector) const
+Vector3 matrix3::operator*(Vector3 & vector)
 {
 	Vector3 result;
 
@@ -45,6 +57,7 @@ Vector3 matrix3::operator*(const Vector3 & vector) const
 	return  result;
 }
 
+//Need To Look at/Fix
 const Vector3 & matrix3::operator[](int index) const
 {
 	return axis[index];

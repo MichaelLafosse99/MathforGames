@@ -15,9 +15,14 @@ public:
 
 	matrix4();
 
+	void rotateX(float radian);
+	void rotateY(float radian);
+	void rotateZ(float radian);
+	void rotateW(float radian);
+
 	matrix4 operator * (const matrix4& otherMatrix) const;
 
-	matrix4 operator * (const Vector4 vector) const;
+	Vector4 operator * (Vector4 vector);
 
 	const Vector4& operator[] (int index) const;
 };

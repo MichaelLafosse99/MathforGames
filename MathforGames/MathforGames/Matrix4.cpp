@@ -12,6 +12,22 @@ matrix4::matrix4()
 	}
 }
 
+void matrix4::rotateX(float radian)
+{
+}
+
+void matrix4::rotateY(float radian)
+{
+}
+
+void matrix4::rotateZ(float radian)
+{
+}
+
+void matrix4::rotateW(float radian)
+{
+}
+
 matrix4 matrix4::operator*(const matrix4 & otherMatrix) const
 {
 	matrix4 result;
@@ -31,7 +47,7 @@ matrix4 matrix4::operator*(const matrix4 & otherMatrix) const
 	return result;
 }
 
-matrix4 matrix4::operator*(const Vector4 vector) const
+Vector4 matrix4::operator*(Vector4 vector)
 {
 	Vector4 result;
 
@@ -46,5 +62,5 @@ matrix4 matrix4::operator*(const Vector4 vector) const
 
 const Vector4 & matrix4::operator[](int index) const
 {
-	// TODO: insert return statement here
+	return axis[index];
 }

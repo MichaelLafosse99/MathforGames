@@ -84,8 +84,10 @@ bool Vector3::operator!=(Vector3 & rhs)
 	return this->xPos != rhs.xPos || this->yPos != rhs.yPos || this->zPos != rhs.zPos;
 }
 
-float Vector3::operator[](int index) const
+float& Vector3::operator[](int index)
 {
+	float none = 0.0f;
+
 	if (index == 0)
 	{
 		return xPos;
@@ -100,15 +102,7 @@ float Vector3::operator[](int index) const
 	}
 	else
 	{
-		return 0;
-	}
-}
-
-Vector3* Vector3::operator[](float number) const
-{
-	Vector3 *ref;
-	if (number == 0)
-	{
-		
+		std::cout << "This is not a correct index" <<  std::endl;
+		return none;
 	}
 }

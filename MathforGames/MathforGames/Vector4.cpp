@@ -84,8 +84,11 @@ bool Vector4::operator!=(Vector4 & rhs)
 	return this->xPos != rhs.xPos || this->yPos != rhs.yPos || this->zPos != rhs.zPos || this->wPos != rhs.wPos;
 }
 
-float Vector4::operator[](int index) const
+float& Vector4::operator[](int index)
 {
+
+	float none = 0.0f;
+
 	if (index == 0)
 	{
 		return xPos;
@@ -104,6 +107,7 @@ float Vector4::operator[](int index) const
 	}
 	else
 	{
-		return 0;
+		std::cout << "This is not a correct index" << std::endl;
+		return none;
 	}
 }

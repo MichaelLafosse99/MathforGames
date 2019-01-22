@@ -18,11 +18,11 @@ int main()
 	vec1.Getx();
 	vec2.Gety();
 
-	vec1.Magnitude();
+	vec1.magnitude();
 	vec1.Distance(vec2);
 
-	vec1.DotProduct(vec2);
-	vec1.Normalize();
+	vec1.dot(vec2);
+	vec1.normalise();
 
 	vec1 + vec2;
 	vec1 - vec2;
@@ -44,13 +44,13 @@ int main()
 	vec3Test1.Gety();
 	vec3Test2.Getz();
 
-	vec3Test1.Magnitude();
+	vec3Test1.magnitude();
 	vec3Test1.Distance(vec3Test2);
 
-	vec3Test1.DotProduct(vec3Test2);
-	vec3Test1.Normalize();
+	vec3Test1.dot(vec3Test2);
+	vec3Test1.normalise();
 
-	vec3Test1.CrossProduct(vec3Test2);
+	vec3Test1.cross(vec3Test2);
 
 	vec3Test1 + vec3Test2;
 	vec3Test1 - vec3Test2;
@@ -73,11 +73,11 @@ int main()
 	vec4Test2.Getz();
 	vec4Test2.Getw();
 
-	vec4Test1.Magnitude();
+	vec4Test1.magnitude();
 	vec4Test1.Distance(vec4Test2);
 
-	vec4Test1.DotProduct(vec4Test2);
-	vec4Test1.Normalize();
+	vec4Test1.dot(vec4Test2);
+	vec4Test1.normalise();
 
 	vec4Test1 + vec4Test2;
 	vec4Test1 - vec4Test2;
@@ -92,8 +92,8 @@ int main()
 
 	//Matrix3 Test Cases:
 
-	matrix3 mat3Test1;
-	matrix3 mat3Test2;
+	Matrix3 mat3Test1;
+	Matrix3 mat3Test2;
 
 	mat3Test1.rotateZ(pi);
 
@@ -102,9 +102,9 @@ int main()
 
 	//Matrix4 Test Cases:
 
-	matrix4 mat4Test1;
-	matrix4 mat4Test2;
-	matrix4 mat4Test3;
+	Matrix4 mat4Test1;
+	Matrix4 mat4Test2;
+	Matrix4 mat4Test3;
 
 	mat4Test1.rotateX(pi / 2);
 	mat4Test1.rotateY(pi / 4);

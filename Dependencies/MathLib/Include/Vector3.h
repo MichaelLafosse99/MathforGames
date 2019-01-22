@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+#include <iostream>
 
 class Vector3
 {
@@ -20,20 +21,20 @@ public:
 	float Getz();
 
 	//Returns the length of a vector
-	float Magnitude();
+	float magnitude();
 
 	//Finds the distance between two vectors
 	float Distance(Vector3 other);
 
-
-	float DotProduct(Vector3 other);
+	//Returns a scalar value by multiplying then adding two vector's positions
+	float dot(Vector3 other);
 	
 	//Modifies the vector's magnitude
-	Vector3 Normalize();
+	Vector3 normalise();
 
 	//Returns a third vector that is perpendicular to both of
 	//the original vectors
-	Vector3 CrossProduct(Vector3 other);
+	Vector3 cross(Vector3 other);
 
 	//Operators to add, subtract, multiply, and equality.
 	Vector3 operator + (Vector3& rhs);
@@ -41,4 +42,7 @@ public:
 	Vector3 operator * (float& rhs);
 	bool operator == (Vector3& rhs);
 	bool operator != (Vector3& rhs);
+
+	//subscript operator that takes in an index and returns a reference
+	float& operator [] (int index);
 };

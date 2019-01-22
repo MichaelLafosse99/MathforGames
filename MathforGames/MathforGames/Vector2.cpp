@@ -25,7 +25,7 @@ float Vector2::Getx()
 }
 
 //Returns the lenght of a vector, using pythagorean theorem
-float Vector2::Magnitude()
+float Vector2::magnitude()
 {
 	float x2 = (xPos * xPos);
 	float y2 = (yPos * yPos);
@@ -37,20 +37,20 @@ float Vector2::Magnitude()
 //Finds the distance between two vectors
 float Vector2::Distance(Vector2 other)
 {
-	return ((*this - other).Magnitude());
+	return ((*this - other).magnitude());
 }
 
 //Returns a scalar value by multiplying then adding two vector's positions
 //Ex: x1*x2 + y1*y2
-float Vector2::DotProduct(Vector2 other)
+float Vector2::dot(Vector2 other)
 {
 	return ((this->xPos*other.xPos) + (this->yPos*other.yPos));
 }
 
 //Modifies the vector's magnitude
-Vector2 Vector2::Normalize()
+Vector2 Vector2::normalise()
 {
-	return Vector2((xPos / Magnitude()), (yPos / Magnitude()));
+	return Vector2((xPos / magnitude()), (yPos / magnitude()));
 }
 
 //Operator that adds two vectors

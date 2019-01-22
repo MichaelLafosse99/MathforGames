@@ -39,7 +39,7 @@ float Vector4::Getw()
 }
 
 //Returns the lenght of a vector, using pythagorean theorem
-float Vector4::Magnitude()
+float Vector4::magnitude()
 {
 	float x2 = (xPos * xPos);
 	float y2 = (yPos * yPos);
@@ -53,20 +53,20 @@ float Vector4::Magnitude()
 //Finds the distance between two vectors
 float Vector4::Distance(Vector4 other)
 {
-	return ((*this - other).Magnitude());
+	return ((*this - other).magnitude());
 }
 
 //Returns a scalar value by multiplying then adding two vector's positions
 //Ex: x1*x2 + y1*y2
-float Vector4::DotProduct(Vector4 other)
+float Vector4::dot(Vector4 other)
 {
 	return ((this->xPos*other.xPos) + (this->yPos*other.yPos) + (this->zPos*other.zPos) + (this->wPos*other.wPos));
 }
 
 //Modifies the vector's magnitude
-Vector4 Vector4::Normalize()
+Vector4 Vector4::normalise()
 {
-	return Vector4((xPos / Magnitude()), (yPos / Magnitude()), (zPos / Magnitude()), (wPos / Magnitude()));
+	return Vector4((xPos / magnitude()), (yPos / magnitude()), (zPos / magnitude()), (wPos / magnitude()));
 }
 
 //Operator that adds two vectors

@@ -18,15 +18,16 @@ public:
 	float Getx();
 
 	//Returns the length of a vector
-	float Magnitude();
+	float magnitude();
 
 	//Finds the distance between two vectors
 	float Distance(Vector2 other);
 
-	float DotProduct(Vector2 other);
+	//Returns a scalar value by multiplying then adding two vector's positions
+	float dot(Vector2 other);
 
 	//Modifies the vector's magnitude
-	Vector2 Normalize();
+	Vector2 normalise();
 
 	//Operators to add, subtract, multiply, and equality.
 	Vector2 operator + (Vector2& rhs);
@@ -34,4 +35,7 @@ public:
 	Vector2 operator * (float& rhs);
 	bool operator == (Vector2& rhs);
 	bool operator != (Vector2& rhs);
+
+	//subscript operator for taking in an index and returning a float
+	float operator [] (int index);
 };

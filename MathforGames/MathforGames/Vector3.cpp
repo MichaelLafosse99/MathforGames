@@ -32,7 +32,7 @@ float Vector3::Getz()
 }
 
 //Returns the lenght of a vector, using pythagorean theorem
-float Vector3::Magnitude()
+float Vector3::magnitude()
 {
 	float x2 = (xPos * xPos);
 	float y2 = (yPos * yPos);
@@ -45,24 +45,24 @@ float Vector3::Magnitude()
 //Finds the distance between two vectors
 float Vector3::Distance(Vector3 other)
 {
-	return ((*this - other).Magnitude());
+	return ((*this - other).magnitude());
 }
 
 //Returns a scalar value by multiplying then adding two vector's positions
 //Ex: x1*x2 + y1*y2
-float Vector3::DotProduct(Vector3 other)
+float Vector3::dot(Vector3 other)
 {
 	return ((this->xPos*other.xPos) + (this->yPos*other.yPos) + (this->zPos*other.zPos));
 }
 
 //Modifies the vector's magnitude
-Vector3 Vector3::Normalize()
+Vector3 Vector3::normalise()
 {
-	return Vector3((xPos / Magnitude()), (yPos / Magnitude()), (zPos / Magnitude()));
+	return Vector3((xPos / magnitude()), (yPos / magnitude()), (zPos / magnitude()));
 }
 
 //Returns a third vector
-Vector3 Vector3::CrossProduct(Vector3 other)
+Vector3 Vector3::cross(Vector3 other)
 {
 	return Vector3((this->yPos*other.zPos) - (this->zPos*other.yPos),
 					(this->zPos*other.xPos) - (this->xPos*other.zPos),

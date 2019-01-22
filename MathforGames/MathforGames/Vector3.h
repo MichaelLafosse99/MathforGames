@@ -21,20 +21,20 @@ public:
 	float Getz();
 
 	//Returns the length of a vector
-	float Magnitude();
+	float magnitude();
 
 	//Finds the distance between two vectors
 	float Distance(Vector3 other);
 
 	//Returns a scalar value by multiplying then adding two vector's positions
-	float DotProduct(Vector3 other);
+	float dot(Vector3 other);
 	
 	//Modifies the vector's magnitude
-	Vector3 Normalize();
+	Vector3 normalise();
 
 	//Returns a third vector that is perpendicular to both of
 	//the original vectors
-	Vector3 CrossProduct(Vector3 other);
+	Vector3 cross(Vector3 other);
 
 	//Operators to add, subtract, multiply, and equality.
 	Vector3 operator + (Vector3& rhs);

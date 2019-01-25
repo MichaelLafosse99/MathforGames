@@ -69,6 +69,13 @@ Vector4 Vector4::normalise()
 	return Vector4((xPos / magnitude()), (yPos / magnitude()), (zPos / magnitude()), (wPos / magnitude()));
 }
 
+Vector4 Vector4::cross(Vector4 other)
+{
+	return Vector4((this->yPos*other.zPos) - (this->zPos*other.yPos),
+				   (this->zPos*other.xPos) - (this->xPos*other.zPos),
+				   (this->xPos*other.yPos) - (this->yPos*other.xPos), 0.0);
+}
+
 //Operator that adds two vectors
 Vector4 Vector4::operator+(Vector4 & rhs)
 {
@@ -82,7 +89,7 @@ Vector4 Vector4::operator-(Vector4 & rhs)
 }
 
 //Operator that multiplies a vector by scalar
-Vector4 Vector4::operator*(float & rhs)
+Vector4 Vector4::operator*(float rhs)
 {
 	return Vector4(this->xPos * rhs, this->yPos * rhs, this->zPos * rhs, this->wPos * rhs);
 }
@@ -126,4 +133,9 @@ float& Vector4::operator[](int index)
 		std::cout << "This is not a correct index" << std::endl;
 		return none;
 	}
+}
+
+Vector4 operator*(float lhs, Vector4 rhs)
+{
+	return Vector4( lhs * rhs);
 }

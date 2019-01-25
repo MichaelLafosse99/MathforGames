@@ -8,8 +8,16 @@ Matrix3::Matrix3()
 		for(int c = 0; c < 3; c++)
 		{
 			data[r][c] = 0.0f;
+			identityMatrix[r][c] = 0.0f;
 		}
 	}
+}
+
+Matrix3::Matrix3(float xx, float xy, float xz, float yx, float yy, float yz, float zx, float zy, float zz)
+{
+	float* ptr = &xx;
+
+
 }
 
 //The "definition" of rotating the z axis

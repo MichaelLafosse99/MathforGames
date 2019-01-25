@@ -32,10 +32,12 @@ public:
 	//Operators to add, subtract, multiply, and equality.
 	Vector2 operator + (Vector2& rhs);
 	Vector2 operator - (Vector2& rhs);
-	Vector2 operator * (float& rhs);
+	Vector2 operator * (float rhs);
 	bool operator == (Vector2& rhs);
 	bool operator != (Vector2& rhs);
 
 	//subscript operator for taking in an index and returning a float
 	float operator [] (int index);
 };
+
+Vector2 operator * (float, Vector2);

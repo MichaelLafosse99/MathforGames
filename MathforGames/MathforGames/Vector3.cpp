@@ -82,7 +82,7 @@ Vector3 Vector3::operator-(Vector3 & rhs)
 }
 
 //Operator that multiplies a vector by scalar
-Vector3 Vector3::operator*(float & rhs)
+Vector3 Vector3::operator*(float rhs)
 {
 	return Vector3(this->xPos * rhs, this->yPos * rhs, this->zPos * rhs);
 }
@@ -121,4 +121,9 @@ float& Vector3::operator[](int index)
 		std::cout << "This is not a correct index" <<  std::endl;
 		return none;
 	}
+}
+
+Vector3 operator*(float lhs, Vector3 rhs)
+{
+	return Vector3(lhs * rhs);
 }

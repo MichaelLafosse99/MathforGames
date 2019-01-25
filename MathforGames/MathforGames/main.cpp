@@ -29,6 +29,8 @@ int main()
 	
 	Vector2 vec3 = vec1 * vec;
 
+	vec2 = vec * vec1;
+
 	vec1 == vec2;
 	vec1 != vec2;
 

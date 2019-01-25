@@ -66,7 +66,7 @@ Vector2 Vector2::operator-(Vector2 & rhs)
 }
 
 //Operator that multiplies a vector by scalar
-Vector2 Vector2::operator*(float & rhs)
+Vector2 Vector2::operator*(float rhs)
 {
 	return Vector2(this->xPos * rhs, this->yPos * rhs);
 }
@@ -98,4 +98,16 @@ float Vector2::operator[](int index)
 	{
 		return 0;
 	}
+}
+
+Vector2::operator float*()
+{
+	float array[2] = { xPos, yPos };
+
+	return &array[0];
+}
+
+Vector2 operator*(float lhs, Vector2 rhs)
+{
+	return Vector2(lhs * rhs);
 }

@@ -34,10 +34,13 @@ public:
 	//Modifies the vector's magnitude
 	Vector4 normalise();
 
+	Vector4 cross(Vector4 other);
+
 	//Operators to add, subtract, multiply, and equality.
 	Vector4 operator + (Vector4& rhs);
 	Vector4 operator - (Vector4& rhs);
-	Vector4 operator * (float& rhs);
+	Vector4 operator * (float rhs);
+	friend Vector4 operator * (float, Vector4);
 	bool operator == (Vector4& rhs);
 	bool operator != (Vector4& rhs);
 

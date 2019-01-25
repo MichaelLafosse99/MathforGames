@@ -39,10 +39,12 @@ public:
 	//Operators to add, subtract, multiply, and equality.
 	Vector3 operator + (Vector3& rhs);
 	Vector3 operator - (Vector3& rhs);
-	Vector3 operator * (float& rhs);
+	Vector3 operator * (float rhs);
+	friend Vector3 operator * (float, Vector3);
 	bool operator == (Vector3& rhs);
 	bool operator != (Vector3& rhs);
 
 	//subscript operator that takes in an index and returns a reference
 	float& operator [] (int index);
 };
+

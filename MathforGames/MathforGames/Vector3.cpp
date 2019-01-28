@@ -123,6 +123,13 @@ float& Vector3::operator[](int index)
 	}
 }
 
+Vector3::operator float*()
+{
+	float array[3] = { xPos, yPos, zPos };
+
+	return &array[0];
+}
+
 Vector3 operator*(float lhs, Vector3 rhs)
 {
 	return Vector3(lhs * rhs);

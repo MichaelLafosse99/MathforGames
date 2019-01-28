@@ -19,6 +19,7 @@ public:
 	//constructor to initialize a matrix
 	Matrix3();
 	Matrix3(float, float, float, float, float, float, float, float, float);
+	//Matrix3(int, int, int, int, int, int, int, int, int);
 
 
 	//The "definition" of rotating the z axis

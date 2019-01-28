@@ -8,6 +8,21 @@ Matrix4::Matrix4()
 		for (int c = 0; c < 4; c++)
 		{
 			data[r][c] = 0.0f;
+			identityMatrix[r][c] = 0.0f;
+		}
+	}
+}
+
+Matrix4::Matrix4(float xx, float xy, float xz, float xw, float yx, float yy, float yz, float yw, float zx, float zy, float zz, float zw, float wx, float wy, float wz, float ww)
+{
+	float* ptr = &xx;
+
+	for (int r = 0; r < 4; r++)
+	{
+		for (int c = 0; c < 4; c++)
+		{
+			data[r][c] = *ptr;
+			identityMatrix[r][c] = *ptr++;
 		}
 	}
 }

@@ -46,4 +46,6 @@ public:
 
 	//subscript operator that takes in an index and returns a reference
 	float& operator [] (int index);
+
+	operator float* ();
 };

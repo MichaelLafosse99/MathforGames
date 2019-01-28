@@ -135,6 +135,13 @@ float& Vector4::operator[](int index)
 	}
 }
 
+Vector4::operator float*()
+{
+	float array[4] = { xPos, yPos, zPos, wPos };
+
+	return &array[4];
+}
+
 Vector4 operator*(float lhs, Vector4 rhs)
 {
 	return Vector4( lhs * rhs);

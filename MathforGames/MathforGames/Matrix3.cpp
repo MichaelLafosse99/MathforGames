@@ -17,8 +17,29 @@ Matrix3::Matrix3(float xx, float xy, float xz, float yx, float yy, float yz, flo
 {
 	float* ptr = &xx;
 
-
+	for (int r = 0; r < 3; r++)
+	{
+		for (int c = 0; c < 3; c++)
+		{
+			data[r][c] = *ptr;
+			identityMatrix[r][c] = *ptr++;
+		}
+	}
 }
+
+//Matrix3::Matrix3(int xx, int xy, int xz, int yx, int yy, int yz, int zx, int zy, int zz)
+//{
+//	int* ptr = &xx;
+//
+//	for (int r = 0; r < 3; r++)
+//	{
+//		for (int c = 0; c < 3; c++)
+//		{
+//			data[r][c] = *ptr;
+//			identityMatrix[r][c] = *ptr++;
+//		}
+//	}
+//}
 
 //The "definition" of rotating the z axis
 void Matrix3::setRotateZ(float radians)

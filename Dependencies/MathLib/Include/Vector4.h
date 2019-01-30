@@ -40,11 +40,12 @@ public:
 	Vector4 operator + (Vector4& rhs);
 	Vector4 operator - (Vector4& rhs);
 	Vector4 operator * (float rhs);
+	friend Vector4 operator * (float, Vector4);
 	bool operator == (Vector4& rhs);
 	bool operator != (Vector4& rhs);
 
 	//subscript operator that takes in an index and returns a reference
 	float& operator [] (int index);
-};
 
-Vector4 operator * (float, Vector4);
+	operator float* ();
+};

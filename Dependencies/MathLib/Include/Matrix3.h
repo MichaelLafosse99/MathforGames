@@ -14,9 +14,13 @@ public:
 	//Vectors used for rotating the matrix
 	Vector3 xAxis, yAxis, zAxis;
 	float data[3][3];
+	float identityMatrix[3][3];
 
 	//constructor to initialize a matrix
 	Matrix3();
+	Matrix3(float, float, float, float, float, float, float, float, float);
+	//Matrix3(int, int, int, int, int, int, int, int, int);
+
 
 	//The "definition" of rotating the z axis
 	void setRotateZ(float radians);

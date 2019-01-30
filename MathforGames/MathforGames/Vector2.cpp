@@ -84,8 +84,10 @@ bool Vector2::operator!=(Vector2 & rhs)
 }
 
 //subscript operator for taking in an index and returning a float
-float Vector2::operator[](int index)
+float& Vector2::operator[](int index)
 {
+	float none = 0.0f;
+
 	if (index == 0)
 	{
 		return xPos;
@@ -96,7 +98,7 @@ float Vector2::operator[](int index)
 	}
 	else
 	{
-		return 0;
+		return none;
 	}
 }
 

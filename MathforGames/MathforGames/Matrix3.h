@@ -33,4 +33,6 @@ public:
 
 	//operator for multiplying a matrix and a vector
 	Vector3 operator * (Vector3& vector);
+
+	operator float* ();
 };

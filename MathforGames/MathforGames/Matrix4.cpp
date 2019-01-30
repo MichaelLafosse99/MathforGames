@@ -110,3 +110,8 @@ Vector4 Matrix4::operator*(Vector4 vector)
 	}
 	return  result;
 }
+
+Matrix4::operator float*()
+{
+	return data[0];
+}

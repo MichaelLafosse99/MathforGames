@@ -91,3 +91,8 @@ Vector3 Matrix3::operator*(Vector3 & vector)
 	}
 	return  result;
 }
+
+Matrix3::operator float*()
+{
+	return data[0];
+}

@@ -38,7 +38,7 @@ public:
 	bool operator != (Vector2& rhs);
 
 	//subscript operator for taking in an index and returning a float
-	float operator [] (int index);
+	float& operator [] (int index);
 
 	operator float* ();
 };
